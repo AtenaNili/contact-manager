@@ -97,28 +97,6 @@ def edit_contact():
 
     messagebox.showinfo("success", "contact edited successfully!")
 
-
-"""tk.Label(root,text="Name", font=font_style, bg="#F9F9F9").grid(row=0, column=1, padx=(20,5), pady=5, sticky='E')
-entry_name= tk.Entry(root)
-entry_name.grid(row=0, column=2, padx=(5,20), pady=5, sticky='W')
-
-tk.Label(root,text="Phone Number", font=font_style, bg="#F9F9F9").grid(row=1, column=1, padx=(20,5), pady=5, sticky='E')
-entry_phone= tk.Entry(root)
-entry_phone.grid(row=1, column=2, padx=(5,20), pady=5, sticky='W')
-
-tk.Label(root,text="Search name", font=font_style, bg="#F9F9F9").grid(row=5, column=1, padx=5, pady=5)
-entry_sname= tk.Entry(root)
-entry_sname.grid(row=5, column=2, padx=5, pady=5)"""
-
-"""
-tk.Button(root, text="Delete contact",command=delete_contact, bg='#68A3D6', fg='white', bd=2).grid(row=3, column=2, padx=5, pady=5)
-
-tk.Button(root, text="edit contact",command=edit_contact, bg='#68A3D6', fg='white', bd=2).grid(row=3, column=3, padx=5, pady=5)
-
-tk.Button(root, text="add contact",command=add_contact, bg='#68A3D6', fg='white', bd=2).grid(row=3, column=1, padx=5, pady=5)
-
-tk.Button(root,text="search name",command=search, bg='#68A3D6', fg='white', bd=2).grid(row=5, column=3, padx=5, pady=5)"""
-
 tk.Label(
     root,
     text="Name",
@@ -129,7 +107,7 @@ entry_name = ctk.CTkEntry(
     master=root,
     width=240,
     height=38,
-    corner_radius=18,              # 👈 گوشه گرد
+    corner_radius=18,             
     placeholder_text="Enter name",
     font=font_style,
     fg_color="#FFFFFF",        
@@ -232,34 +210,23 @@ ctk.CTkButton(
 ).grid(row=5, column=3, padx=5, pady=5)
 
 
-"""listbox = tk.Listbox(root, width=50, bg="#FFFFFF", font=font_style)
-listbox.grid(row=4, column=0,columnspan=4, padx=5, pady=5)
 
-scroll = tk.Scrollbar(root)
-scroll.grid(row=4, column=4, sticky="ns")
-
-listbox.config(yscrollcommand=scroll.set)
-scroll.config(command=listbox.yview)"""
-
-# ---------- LISTBOX FRAME (برای فاصله داخلی و ظاهر تمیز) ----------
 
 list_frame = tk.Frame(
     root,
-    bg="#4A90E2",      # رنگ حاشیه هماهنگ با دکمه‌ها
-    padx=6,            # فاصله داخلی افقی
-    pady=6             # فاصله داخلی عمودی
+    bg="#4A90E2",      
+    padx=6,            
+    pady=6             
 )
 
 list_frame.grid(
     row=4,
     column=0,
     columnspan=4,
-    padx=(30, 10),     # 👈 فاصله بیشتر از سمت چپ
+    padx=(30, 10),     
     pady=10,
     sticky="w"
 )
-
-# ---------- LISTBOX ----------
 
 listbox = tk.Listbox(
     list_frame,
@@ -270,7 +237,7 @@ listbox = tk.Listbox(
     fg="#333333",
     selectbackground="#E3F2FD",
     selectforeground="#0D47A1",
-    highlightthickness=0,   # حذف کادر پیش‌فرض
+    highlightthickness=0,   
     bd=0,
     activestyle="none"
 )
