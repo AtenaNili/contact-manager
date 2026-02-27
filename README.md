@@ -46,6 +46,7 @@ The graphical interface includes:
 
 ```bash
 python contact.py
+```
 
 ## Purpose
 This project was created for:
